@@ -42,7 +42,7 @@ public class Randomness {
 	        //Repeating yourself with a while loop 
 	        
 	        Scanner keyboard = new Scanner(System.in);
-			int secretNumber, guess = 0;//guess is initialized to 0
+	        /*int secretNumber, guess = 0;//guess is initialized to 0
 			
 			secretNumber = 123;
 			
@@ -63,7 +63,36 @@ public class Randomness {
 			
 			System.out.println("You are correct. You win a prize!");
 			keyboard.close();
-
+            */
+	        
+	        //Monopoly Dice
+	        int num1,num2;
+	        int num=0;
+	        
+	        while(true)
+	        {
+		        System.out.println("Enter 2 dice number:");
+		        num1 = keyboard.nextInt();
+		        num2 = keyboard.nextInt();
+		        if(num==2)
+		        {
+		        	System.out.println("DOUBLES!");
+		        	System.out.println("GO TO JAIL");
+		        	break;
+		        }
+		        if(num1 == num2)
+		        {
+		        	num++;
+		        	System.out.println("DOUBLES!");
+		        	System.out.println("Move "+ (num1+num2)+" Spaces and roll again getting");
+		        	continue;
+		        }
+		        if(num1 != num2)
+		        {
+		        	System.out.println("Move "+ (num1+num2)+" Spaces and stop");
+		        	break;
+		        }
+	        }
 
 	    }
 	  
