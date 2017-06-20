@@ -29,6 +29,41 @@ public class Randomness {
 	        }
 	    
 	        System.out.println("Done.");
+	        
+	        //Randomness Completion Activity 
+	        
+	        int dienumber;
+	        //Random rnd =
+	        
+	        dienumber = 1+rnd.nextInt(6);
+	        
+	        System.out.println("Your die roll was : " + dienumber);
+	        
+	        //Repeating yourself with a while loop 
+	        
+	        Scanner keyboard = new Scanner(System.in);
+			int secretNumber, guess = 0;//guess is initialized to 0
+			
+			secretNumber = 123;
+			
+			System.out.println("I'm thinking of a number between 1 and 1000");
+			System.out.print("Enter the number:");
+			guess = keyboard.nextInt();
+			
+			while ( guess != secretNumber )
+			{
+				if(guess == 5)
+				{
+					break;
+				}
+				System.out.println("\nYou are wrong. Try again.");
+				System.out.println("Enter the number: ");
+				guess = keyboard.nextInt();
+			}
+			
+			System.out.println("You are correct. You win a prize!");
+			keyboard.close();
+
 
 	    }
 	  
